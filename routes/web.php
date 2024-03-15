@@ -14,9 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\PrincipalController@principal')->name('site.index');
+Route::get('/sobrenos', 'App\Http\Controllers\SobreNosController@sobrenos')->name('site.sobrenos');
+Route::get('/contato', 'App\Http\Controllers\ContatoController@contato')->name('site.contato');
+
+Route::get('contato/{nome}/{mensagem?}',
+            function(string $nome, string $mensagem = 'sem texto'){
+                echo "passagem de parametros via browser: $nome - $mensagem";
+            }
+        );
+
+      /*  Route::get('/admin'. function(){
+            return redirect()->route('site.index');
+        });
+
+        Route::fallback(function(){
+            echo 'a rota não existe <a href="' .route('site.index').'"> clique aqui </a> ';
+        });
+*/
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
