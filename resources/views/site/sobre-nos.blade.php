@@ -7,42 +7,102 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="{{ asset('/css/style.css')}}" rel="stylesheet">
     <link href="{{ asset('/js/app.js')}}" rel="script">
+    <style>
+       body{
+        background-color: #F8F8FF;
+      }
+h1 {
+  font-family: 'Papyrus', sans-serif;
+  border-bottom: 2px solid black; 
+  padding-bottom: 5px;
+}
+
+
+p.tex{
+  font-family: 'Papyrus', sans-serif; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  background-color: #F8F8FF	;
+}
+button.tex{
+        font-family: 'Papyrus', sans-serif;
+        font-weight: 600
+      }
+      footer {
+  background-color: #f44336; 
+  padding: 20px 0;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff; 
+}
+.footer-content p {
+  margin-bottom: 10px;
+}
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-content ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.footer-content ul li:last-child {
+  margin-right: 0;
+}
+.footer-content ul li a {
+  color: #fff; 
+  text-decoration: none;
+}
+.footer-content ul li a:hover {
+  text-decoration: underline;
+}
+footer {
+  background: linear-gradient(to right, #f44336, #ff5252); 
+}
+</style>
   </head>
   <body>
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-  <a class="navbar-brand" href="principal.blade.php">
-      <img src="/imgs/logo.png" alt="Etec" width="30" height="24">
+  <a class="navbar-brand" href="/">
+      <img src="https://www.eteczonaleste.com.br/wp-content/uploads/2023/11/logo-etec.png" alt="Etec" width="30" height="24">
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="principal.blade.php">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="/"><button type="button" class="btn btn-outline-success tex">Início</button></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sobre-nos.blade.php">Sobre nós</a>
+          <a class="nav-link" href="/sobrenos"><button type="button" class="btn btn-outline-primary tex">Sobre nós</button></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contato.blade.php">Contato</a>
+          <a class="nav-link" href="/contato"><button type="button" class="btn btn-outline-primary tex">Contato</button></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="noticia.blade.php">Notícias</a>
+          <a class="nav-link" href="/noticia"><button type="button" class="btn btn-outline-primary tex">Notícias</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register"><button type="button" class="btn btn-outline-danger tex">Registro</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login"><button type="button" class="btn btn-outline-danger tex">Login</button></a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-      </form>
     </div>
   </div>
 </nav>
 
 
-<img src="/imgs/biblioteca.png" class="img-fluid" alt="...">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/BIBLI-ZL.jpg/250px-BIBLI-ZL.jpg" class="img-fluid" alt="...">
 
 <h1>Nossa História</h1>
-<p>
+<p class="tex">
   Localizada estrategicamente na Avenida Águia de Haia, na Zona Leste de São Paulo, a Etec Zona Leste se destaca como um importante polo educacional na região. <br>
 Sua história remonta ao compromisso com a excelência educacional e o desenvolvimento profissional dos estudantes.
 
@@ -61,5 +121,17 @@ equipe, a liderança e a criatividade.
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
-  </body>
+ 
+
+</body>
+<footer class="footer"> <!-- Adicionando a classe "footer" ao footer -->
+  <div class="footer-content">
+    <p>© 2024 Etec Zona Leste. Todos os direitos reservados.</p>
+    <ul>
+      <li><a href="#">Política de Privacidade</a></li>
+      <li><a href="#">Termos de Serviço</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </div>
+</footer>
 </html>

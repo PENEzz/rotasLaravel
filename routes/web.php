@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\PrincipalController@principal')->name('site.index');
 Route::get('/sobrenos', 'App\Http\Controllers\SobreNosController@sobrenos')->name('site.sobrenos');
 Route::get('/contato', 'App\Http\Controllers\ContatoController@contato')->name('site.contato');
+Route::get('/noticia', 'App\Http\Controllers\NoticiasController@noticias')->name('site.noticias');
 
 Route::get('contato/{nome}/{mensagem?}',
             function(string $nome, string $mensagem = 'sem texto'){

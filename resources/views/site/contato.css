@@ -1,0 +1,128 @@
+.contatos {
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.icones {
+    width: 90%;
+    display: flex;
+    align-content: space-evenly; /* space-evenly: Espaçamento uniforme.*/
+    padding-block: 1.5rem;
+}
+
+.icone {
+    font-size: 3rem; /* 3rem = 3*16=48px. */
+    color: red;
+    cursor: pointer;
+}
+
+.sessao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 45px;
+    width: 500px;
+    border-radius: 20px;
+    margin: 100px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.title {
+    font-size: 32px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.textzin {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 20px;
+    text-align: center;
+}
+
+.myButton {
+    color: #F7F6FB;
+    background: #002782;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px 55px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid #002782;
+    outline: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 88ms ease-in;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #dedde1;
+    padding: 12px 40px 12px 15px;
+    margin: 8px 15px;
+    width: calc(100% - 55px);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #dedde1;
+    padding: 12px 40px 12px 15px;
+    margin: 8px 15px;
+    width: calc(100% - 55px);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+}
+
+.contact_icon1 {
+    position: absolute;
+    transform: translateY(460%);
+    right: 320px;
+    color: #6d6d6d;
+    font-size: 20px;
+}
+
+.contact_icon2 {
+    position: absolute;
+    transform: translateY(750%);
+    right: 320px;
+    color: #6d6d6d;
+    font-size: 20px;
+}
+
+.areatext {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #dedde1;
+    padding: 12px 40px 12px 15px;
+    margin: 8px 15px;
+    width: calc(100% - 55px);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+}
