@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="{{ asset('/css/style.css')}}" rel="stylesheet">
+  
     <link href="{{ asset('/js/app.js')}}" rel="script">
     <style>
        body{
@@ -101,12 +101,16 @@ footer {
 <form id="mainForm" class="tex">
         <h2 class="mb-3">Complete o formulário</h2>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="emailInp" placeholder="nome@exemplo.com">
-            <label for="floatingInput">Endereço de email</label>
+            <input type="text" class="form-control" id="nameInp" placeholder="Nome">
+            <label for="floatingPassword">Nome</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="passwordInp" placeholder="Senha">
-            <label for="floatingPassword">Senha</label>
+            <input type="formControll" class="form-control" id="telefoneInp" placeholder="Telefone">
+            <label for="floatingPassword">Telefone</label>
+          </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="emailInp" placeholder="nome@exemplo.com">
+            <label for="floatingInput">Endereço de email</label>
           </div>
           <div class="form-floating mb-3">
             <input type="formControll" class="form-control" id="comentInp" placeholder="Comentario">
@@ -116,6 +120,54 @@ footer {
 
           <button type="submit" class="btn btn-outline-danger" style="float: right">Enviar Formulário</button>
         </form>
+
+        <script>
+    const form = document.querySelector("#mainForm");
+const nameInput = document.querySelector("#nameInp");
+const telefoneInput = document.querySelector("#telefoneInp");
+const emailInput = document.querySelector("#emailInp");
+const comentarioInput = document.querySelector("#comentInp");
+
+      form.addEventListener("submit", function (event)  {
+        event.preventDefault();
+
+        if(nameInput.value === ""){
+          alert("Por favor, o preencha seu nome");
+          return;
+        }
+
+        if(emailInput.value === "" || !isEmailValid(emailInput.value)){
+          alert("Por favor, preencha seu email");
+          return;
+        }
+
+        if(telefoneInput.value === ""){
+            alert("Por favor, preencha seu telefone");
+            return;
+          }
+
+        if(comentarioInput.value === ""){
+          alert("Por favor, preencha uma mensagem");
+          return;
+        }
+
+
+        form.submit();
+      })
+
+      function isEmailValid(email){
+        const emailRegex = new RegExp(
+          /^[a-zA-Z0-0._-]+@[a-zA-Z0-0._-]+\.[a-zA-Z]{2,}$/
+        );
+
+        if(emailRegex.test(email)){
+          return true;
+        }
+        return false;
+      }
+
+
+   </script>
 
 
 
